@@ -23,7 +23,7 @@ class WeatherApp {
 
         // Default city and other initializations
         this.currentCity = 'Ishwardi';
-        this.refreshInterval = 300000; // 5 minutes auto-refresh interval
+        this.refreshInterval = 30000; // 30 seconds auto-refresh interval
         this.refreshTimer = null;
         this.searchTimeout = null;
         this.currentTempCelsius = 0;
