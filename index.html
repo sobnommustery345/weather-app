@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding for the document -->
+    <meta charset="UTF-8">
+    
+    <!-- Viewport settings for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage -->
+    <title>Weather App | Real-Time Weather Info</title>
+    
+    <!-- Meta description for search engines -->
+    <meta name="description" content="Get accurate and up-to-date weather information for your city. Check temperature, humidity, wind speed, and more with our user-friendly Weather App.">
+    
+    <!-- Meta keywords (optional but can help search engines) -->
+    <meta name="keywords" content=" Mst Sobnom Mustery Mimma, weather app, weather, city weather, temperature, real-time weather, humidity, wind speed, forecast, weather app for city">
+    
+    <!-- Meta tag for author -->
+    <meta name="author" content="Mst Sobnom Mustery Mimma">
+    
+    <!-- Open Graph meta tags for better sharing on social media -->
+    <meta property="og:title" content="Weather App - Real-Time Weather Information">
+    <meta property="og:description" content="Stay updated with the latest weather conditions. Get accurate temperature, humidity, wind speed, and weather updates in real-time.">
+    <meta property="og:image" content="URL-to-your-app-image.jpg"> <!-- Update this with an actual image URL -->
+    <meta property="og:url" content="https://your-website-url.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Weather App - Real-Time Weather Information">
+    <meta name="twitter:description" content="Get accurate weather updates for your city in real-time with our user-friendly Weather App.">
+    <meta name="twitter:image" content="URL-to-your-app-image.jpg"> <!-- Update this with an actual image URL -->
+    <meta name="twitter:creator" content="@your_twitter_handle"> <!-- Your Twitter handle if applicable -->
+
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="css & js/style.css">
+    
+    <!-- Favicon for the website -->
+    <link rel="icon" href="images/Weather app.ico" type="image/x-icon" sizes="256x256">
+
+    <!-- Canonical URL to avoid duplicate content issues -->
+    <link rel="canonical" href="https://your-website-url.com">
+</head>
+<body>
+    <div class="container">
+        <!-- Search Box Section -->
+        <div class="search-box">
+            <div class="search-input-container">
+                <!-- Input field for entering city name -->
+                <input type="text" placeholder="Enter city name" id="search-input">
+                
+                <!-- Suggestions container (hidden by default) -->
+                <div class="suggestions hidden" id="suggestions"></div>
+            </div>
+            
+            <!-- Search button with an icon -->
+            <button id="search-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Weather Info Box (hidden by default) -->
+        <div class="weather-box hidden">
+            <div class="location">
+                <!-- Display the name of the city -->
+                <h2 id="city">Ishwardi</h2>
+                
+                <!-- Container for weather icon -->
+                <div class="weather-icon">
+                    <img src="" alt="weather icon" id="weather-icon">
+                </div>
+            </div>
+
+            <div class="weather-info">
+                <!-- Display the temperature with toggle for unit (°C/°F) -->
+                <div class="temperature">
+                    <span id="temp">0</span>
+                    <button id="unit-toggle" class="unit-toggle">°C</button>
+                </div>
+                
+                <!-- Display the weather condition (e.g., Clear, Rainy) -->
+                <div class="weather-condition" id="condition">Clear</div>
+            </div>
+
+            <div class="weather-details">
+                <!-- Display humidity -->
+                <div class="humidity">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                    </svg>
+                    <div>
+                        <span id="humidity">0</span>% 
+                        <p>Humidity</p>
+                    </div>
+                </div>
+
+                <!-- Display wind speed -->
+                <div class="wind">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/>
+                    </svg>
+                    <div>
+                        <span id="wind-speed">0</span> km/h
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Last update timestamp -->
+            <div class="last-update">
+                Last updated: <span id="update-time">Never</span>
+            </div>
+        </div>
+
+        <!-- Loading Box (hidden by default) -->
+        <div class="loading-box hidden">
+            <div class="loader"></div>
+            <p>Fetching weather data...</p>
+        </div>
+
+        <!-- Error Box (hidden by default) -->
+        <div class="error-box hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            <p id="error-message">City not found</p>
+        </div>
+    </div>
+    
+    <!-- Link to the external JavaScript file -->
+    <script src="css & js/script.js"></script>
+</body>
+</html>
